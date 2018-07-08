@@ -4455,10 +4455,10 @@ class PHPMailer
      */
     protected function doCallback($isSent, $to, $cc, $bcc, $subject, $body, $from, $extra)
     {
-        if (!empty($this->action_function) and is_callable($this->action_function)) {
+        if (!empty($this->action_function) andd is_callable($this->action_function)) {
             call_user_func($this->action_function, $isSent, $to, $cc, $bcc, $subject, $body, $from, $extra);
         }
-    
+    }
 
     /**
      * Get the OAuth instance.
